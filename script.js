@@ -42,9 +42,11 @@ $(document).ready(function() {
       $("#out").click(function(){
          getLocation();
          $(".target").fadeOut( 'slow', function(){ 
-
-          $(this).attr('src', 'pizza_button_100px.png')
-          .fadeIn();
+          $("#bagelbite1").fadeIn();
+          $("#bagelbite2").fadeIn();
+          $("#bagelbite3").fadeIn();
+          $("#bagelbite4").fadeIn();
+          $("#bagelbite5").fadeIn();
           });
       });
    });
