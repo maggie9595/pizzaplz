@@ -18,16 +18,14 @@ input:focus {
     display: inline;
     width: 100px;
 }
-#header ul li a {
+#header a {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 100;
+  font-weight: 700;
   font-size:16px;
-  margin-right: 20px;
-  padding:10px;
+  margin-right: 50px;
   position:relative;
   top: 36px;
-  color: white;
-  background-color: #26A65B;
+  color: #26A65B;
   text-decoration: none;
 }
 
@@ -53,8 +51,13 @@ input:focus {
   position:relative;
   height:200px;
   background-color:#724C2D;
-} #footer #container
-{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 100;
+  font-size:12px;
+  color:#FFEEA9;
+} 
+
+#footer #container {
   width:960px;
   margin-right: auto;
   margin-left: auto;
