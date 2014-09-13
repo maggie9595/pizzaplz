@@ -32,6 +32,10 @@ input:focus {
   text-decoration: none;
 }
 
+#header ul li a:hover {
+  color:red;
+}
+
 #out {
   position:relative;
   bottom:-40px;
@@ -62,6 +66,10 @@ input:focus {
 
 #footer a {
   color:#E8C45D;
+}
+
+#footer a:hover{
+  color:white;
 }
 
 #footer #container {
