@@ -1,7 +1,7 @@
 <html>
 <header>
   <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
-  <script type="text/javascript" src="https://apis.google.com/js/hangouts.telephone.js"></script>
+  <!--<script type="text/javascript" src="https://apis.google.com/js/hangouts.telephone.js"></script> -->
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="script.js"></script>
@@ -34,7 +34,10 @@
 
         <div id="bagelbite1" style="display:none;">
     		  <div class = "g_hangout">
-    		    <div id="g_hangout1"></div>
+    		    <g:hangout render="createhangout"
+        		  invites="[{ id : '+1-412-621-6220', invite_type : 'PHONE' }]"
+        		  widget_size=72>
+      	 	   </g:hangout>
     		  </div>
 
           <img src="pizza_button_100px.png" style="display:block-inline;float:left;margin-right:20px">
@@ -45,7 +48,7 @@
 
         <div id="bagelbite2" style="display:none;">
 		  <div class = "g_hangout">
-			  <div id="g_hangout2"></div>
+			  <div id="g_hangout1"></div>
 		  </div>
           <img src="pizza_button_100px.png" style="display:block-inline;float:left;margin-right:20px">
           <div id = "bb21"></div>
@@ -55,7 +58,10 @@
 
         <div id="bagelbite3" style="display:none;">
 		  <div class = "g_hangout">
-	      <div id="g_hangout3"></div>
+	      <g:hangout render="createhangout"
+  		  invites="[{ id : '+1-412-621-6220', invite_type : 'PHONE' }]"
+  		  widget_size=72>
+	 	    </g:hangout>
 		  </div>
           <img src="pizza_button_100px.png" style="display:block-inline;float:left;margin-right:20px ">
           <div id = "bb31"></div>
