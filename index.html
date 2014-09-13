@@ -71,16 +71,22 @@
       <div id="info">
         <div id="clockbox">.</div>
         <div id="messagebox">.</div>
-        Order some damn pizza already.<br>
-        <br>
+        Order some pizza already.<br>
       </div>
       <div id="instructions">
       <ol>
-        <li>Click on the big ass pizza<br>
+        <li>Click on the really big pizza<br>
         <li>Select your restaurant of choice<br>
         <li>Wait while we forward your call <br>
         <li>Order your pizza! <br>
       </ol>
+      or... <br>
+      Vocelli's: <div id="vocellis"></div>
+      <script>
+        gapi.hangout.render('vocellis', { 'render': 'createhangout',
+        'invites':[{'id': '4122464444','invite_type':'PHONE'}],
+        'widget_size':'72'});
+      </script>
       </div>
       </div>
     </div>
