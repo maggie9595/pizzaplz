@@ -32,8 +32,8 @@ $TOKEN_SECRET = 'z9o4kDirqKoKQVfvQue9ePbCzf4';
 
 $API_HOST = 'api.yelp.com';
 $DEFAULT_TERM = 'pizza';
-$LATITUDE = $_GET['lat'];
-$LONGITUDE = $_GET['lng'];
+$LATITUDE = 40.44330;
+$LONGITUDE = -79.94464; //$_GET['lng'];
 $LL = '$LATITUDE, $LONGITUDE';
 //$DEFAULT_LOCATION = 'San Francisco, CA';
 $SEARCH_LIMIT = 3;
