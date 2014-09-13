@@ -75,15 +75,19 @@ function fetchOptions() {
 
 function createGoogleHangout()
 {
-  var string1 = "<g:hangout render='createhangout' invites='[{ id :'"
-  var string2 = biz2_number
-  var string3 = "', invite_type : 'PHONE' }]' widget_size=72> </g:hangout>"
-  var result = string1 + string2 + string3;
-  console.log(result);
-  document.getElementById('g_hangout1').innerHTML = (string)result;
+  gapi.hangout.render('g_hangout1', { 'render': 'createhangout',
+    'invites':[{'id': biz1_number.toString(),'invite_type':'PHONE'}],
+    'widget_size':'72'});
+  gapi.hangout.render('g_hangout2', { 'render': 'createhangout',
+    'invites':[{'id': biz2_number.toString(),'invite_type':'PHONE'}],
+    'widget_size':'72'});
+  gapi.hangout.render('g_hangout3', { 'render': 'createhangout',
+    'invites':[{'id': biz3_number.toString(),'invite_type':'PHONE'}],
+    'widget_size':'72'});
 }
 
 function updateBagelInfo()
+
 {
   var biz1 = biz_array[0];
   var biz2 = biz_array[1];
