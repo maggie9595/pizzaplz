@@ -27,8 +27,8 @@ input:focus {
   padding:10px;
   position:relative;
   top: 36px;
-  color: white;
-  background-color: #26A65B;
+  color: #26A65B;
+  background-color: #FFEEA9;
   text-decoration: none;
 }
 
