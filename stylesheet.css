@@ -32,18 +32,6 @@ input:focus {
   text-decoration: none;
 }
 
-
-#header a {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 700;
-  font-size:16px;
-  margin-right: 50px;
-  position:relative;
-  top: 36px;
-  color: #26A65B;
-  text-decoration: none;
-}
-
 #out {
   position:relative;
   bottom:-40px;
