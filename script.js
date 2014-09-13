@@ -1,6 +1,10 @@
 var lng;
 var lat;
 var biz_array=[null,null,null];
+var biz1_number;
+var biz2_number;
+var biz3_number;
+var final_number;
 
 
 function funnyMessages(hr)
@@ -84,6 +88,11 @@ function updateBagelInfo()
   document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
   ((biz3["location"])["display_address"])[1];
   document.getElementById('bb33').innerHTML = biz3["rating"] + " Stars";
+
+  //get phone numbers for all 3 
+  biz1_number= biz1["phone"];
+  biz2_number= biz2["phone"];
+  biz3_number= biz3["phone"];
 }
 
 
