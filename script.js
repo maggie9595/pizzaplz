@@ -14,7 +14,7 @@ function GetClock(){
 
   document.getElementById('clockbox').innerHTML="It's "+nhour+":"+nmin+ap+".";
   setTimeout("GetClock()", 1000);
-  }
+}
 
 function storeLocation(position)
 {
