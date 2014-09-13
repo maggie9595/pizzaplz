@@ -7,11 +7,14 @@
 
       $("#in").click(function(){
          $(".target").fadeIn( 'slow', function(){
+
           });
       });
 
       $("#out").click(function(){
+         getLocation();
          $(".target").fadeOut( 'slow', function(){ 
+
           $(this).attr('src', "pizza_button_100px.png")
           .fadeIn();
           });
