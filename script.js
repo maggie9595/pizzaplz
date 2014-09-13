@@ -116,9 +116,9 @@ function updateBagelInfo()
   //document.getElementById('bb33').innerHTML = biz3["rating"];
   
 
-  document.getElementById('bb13')=chooseStarPicture(eval(biz1["rating"]));
+  /*document.getElementById('bb13')=chooseStarPicture(eval(biz1["rating"]));
   document.getElementById('bb23')=chooseStarPicture(eval(biz2["rating"]));
-  document.getElementById('bb34')=chooseStarPicture(eval(biz3["rating"]));
+  document.getElementById('bb34')=chooseStarPicture(eval(biz3["rating"]));*/
 
 
 
