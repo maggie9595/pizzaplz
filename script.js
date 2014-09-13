@@ -4,7 +4,7 @@ var biz_array=[null,null,null];
 var biz1_number;
 var biz2_number;
 var biz3_number;
-var final_number;
+var start = 0;
 
 
 function funnyMessages(hr)
@@ -95,27 +95,46 @@ function chooseStarPicture(stars){
   else return ("yelp_5_stars.png");
 }
 
+
+
 function updateBagelInfo()
 
 {
-  
-  var biz1 = biz_array[0];
-  var biz2 = biz_array[1];
-  var biz3 = biz_array[2];
-
-  document.getElementById('bb11').innerHTML = biz1["name"];
-  document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
-  ((biz1["location"])["display_address"])[1];
-  //document.getElementById('bb13').innerHTML = biz1["rating"];
-  document.getElementById('bb21').innerHTML = biz2["name"];
-  document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
-  ((biz2["location"])["display_address"])[1];
-  //document.getElementById('bb23').innerHTML = biz2["rating"];
-  document.getElementById('bb31').innerHTML = biz3["name"];
-  document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
-  ((biz3["location"])["display_address"])[1];
-  //document.getElementById('bb33').innerHTML = biz3["rating"];
-  
+  var biz1;
+  var biz2;
+  var biz3;
+  if (0 <= start && start < biz_array.length)
+  {
+    biz1 = biz_array[start];
+    document.getElementById('bb11').innerHTML = biz1["name"];
+    document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
+    ((biz1["location"])["display_address"])[1];
+    //document.getElementById('bb13').innerHTML = biz1["rating"]; 
+  }
+  if (0 <= start+1 && start+1 < biz_array.length)
+  {
+    biz2 = biz_array[start+1];
+    document.getElementById('bb21').innerHTML = biz2["name"];
+    document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
+    ((biz2["location"])["display_address"])[1];
+    //document.getElementById('bb23').innerHTML = biz2["rating"];
+  } else
+  {
+    document.getElementById('bb21').innerHTML = "";
+    document.getElementById('bb22').innerHTML = "";
+  }
+  if (0 <= start+2 && start+2 < biz_array.length)
+  {
+    biz3 = biz_array[start+2];
+    document.getElementById('bb31').innerHTML = biz3["name"];
+    document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
+    ((biz3["location"])["display_address"])[1];
+    //document.getElementById('bb33').innerHTML = biz3["rating"];
+  }else
+  {
+    document.getElementById('bb31').innerHTML = "";
+    document.getElementById('bb32').innerHTML = "";
+  }
 
   /*document.getElementById('bb13')=chooseStarPicture(eval(biz1["rating"]));
   document.getElementById('bb23')=chooseStarPicture(eval(biz2["rating"]));
@@ -127,6 +146,24 @@ function updateBagelInfo()
   biz1_number= biz1["phone"];
   biz2_number= biz2["phone"];
   biz3_number= biz3["phone"];
+}
+
+function flipPages(x)
+{
+  console.log("uhoh");
+  if (biz_array == null) return 0;
+  if (x == -1 && (start-3) >=0)
+  {
+    start -= 3;
+    updateBagelInfo();
+    createGoogleHangout();
+  }
+  if (x == 1 && (start+3) < biz_array.length)
+  {
+    start += 3;
+    updateBagelInfo();
+    createGoogleHangout();
+  }
 }
 
 
