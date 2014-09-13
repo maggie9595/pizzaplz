@@ -1,5 +1,5 @@
 <html>
-
+<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
 <header>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <title> PIZZA PLZ </title>
@@ -8,6 +8,10 @@
 <body>
   <div id="header"> <div class="main">PIZZA HEADER</div></div>
   <div id="body">
+  <div id="placeholder-div"></div>
+  <script>
+	gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
+  </script>
   <div class = "main">
   <div id="info">
     <br>
@@ -17,6 +21,7 @@
   </div>
   </div>
   </div>
+  
 </body>
 
 </html>
