@@ -121,30 +121,6 @@ function get_business($business_id) {
  * @param    $location    The location of the business to query
  */
 
-function query_api() {     
-    
-    $response = json_decode(search());
-    $business_id0 = $response->businesses[0]->id;
-    $business_id1 = $response->businesses[1]->id;
-    $business_id2 = $response->businesses[2]->id;
-
-    
-    print sprintf(
-        "%d businesses found, querying business info for the top 3 result \"%s,%s,%s\"\n\n",         
-        count($response->businesses),
-        $business_id0, $business_id1, $business_id2
-    );
-    
-    $response0 = get_business($business_id0);
-    $response1 = get_business($business_id1);
-    $response2 = get_business($business_id2);
-    
-    print sprintf("Result for business \"%s\" found:\n", $business_id0);
-    print "$response0\n";
-    //print "\n$response1\n";
-    //print "\n$response2\n";
-}
-
 /**
  * User input is handled here 
  */

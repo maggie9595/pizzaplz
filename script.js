@@ -62,7 +62,28 @@ function fetchOptions() {
     {
       biz_array[index] = array[index];
     }
+    updateBagelInfo();
   });
+}
+
+function updateBagelInfo()
+{
+  var biz1 = biz_array[0];
+  var biz2 = biz_array[1];
+  var biz3 = biz_array[2];
+
+  document.getElementById('bb11').innerHTML = biz1["name"];
+  document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
+  ((biz1["location"])["display_address"])[1];
+  document.getElementById('bb13').innerHTML = biz1["rating"] + " Stars";
+  document.getElementById('bb21').innerHTML = biz2["name"];
+  document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
+  ((biz2["location"])["display_address"])[1];
+  document.getElementById('bb23').innerHTML = biz2["rating"] + " Stars";
+  document.getElementById('bb31').innerHTML = biz3["name"];
+  document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
+  ((biz3["location"])["display_address"])[1];
+  document.getElementById('bb33').innerHTML = biz3["rating"] + " Stars";
 }
 
 
@@ -76,6 +97,7 @@ $(document).ready(function() {
       $("#out").click(function(){
          getLocation();
          fetchOptions();
+         
          $(".target").fadeOut( 'slow', function(){ 
           $("#bagelbite1").fadeIn();
           $("#bagelbite2").fadeIn();
