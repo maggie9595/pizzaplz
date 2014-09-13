@@ -109,6 +109,7 @@ function updateBagelInfo()
     document.getElementById('bb11').innerHTML = biz1["name"];
     document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
     ((biz1["location"])["display_address"])[1];
+    document.getElementById('bb13').src=chooseStarPicture(eval(biz1["rating"]));
     //document.getElementById('bb13').innerHTML = biz1["rating"]; 
   }
   if (0 <= start+1 && start+1 < biz_array.length)
@@ -117,11 +118,13 @@ function updateBagelInfo()
     document.getElementById('bb21').innerHTML = biz2["name"];
     document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
     ((biz2["location"])["display_address"])[1];
+    document.getElementById('bb23').src=chooseStarPicture(eval(biz2["rating"]));
     //document.getElementById('bb23').innerHTML = biz2["rating"];
   } else
   {
     document.getElementById('bb21').innerHTML = "";
     document.getElementById('bb22').innerHTML = "";
+    document.getElementById('bb23').src = "";
   }
   if (0 <= start+2 && start+2 < biz_array.length)
   {
@@ -129,16 +132,18 @@ function updateBagelInfo()
     document.getElementById('bb31').innerHTML = biz3["name"];
     document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
     ((biz3["location"])["display_address"])[1];
+    document.getElementById('bb33').src=chooseStarPicture(eval(biz3["rating"]));
     //document.getElementById('bb33').innerHTML = biz3["rating"];
   }else
   {
     document.getElementById('bb31').innerHTML = "";
     document.getElementById('bb32').innerHTML = "";
+    document.getElementById('bb33').src = ""
   }
 
-  /*document.getElementById('bb13')=chooseStarPicture(eval(biz1["rating"]));
-  document.getElementById('bb23')=chooseStarPicture(eval(biz2["rating"]));
-  document.getElementById('bb34')=chooseStarPicture(eval(biz3["rating"]));*/
+  
+  
+  
 
 
 
