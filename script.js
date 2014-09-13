@@ -92,9 +92,9 @@ function updateBagelInfo()
   document.getElementById('bb33').innerHTML = biz3["rating"] + " Stars";
 
   //get phone numbers for all 3 
-  biz1_number= biz1["display_phone"];
-  biz2_number= biz2["display_phone"];
-  biz3_number= biz3["display_phone"];
+  biz1_number= biz1["phone"];
+  biz2_number= biz2["phone"];
+  biz3_number= biz3["phone"];
 }
 
 
