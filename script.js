@@ -65,6 +65,8 @@ function fetchOptions() {
     for (index = 0; index < array.length; index++)
     {
       biz_array[index] = array[index];
+	  console.log(biz_array[index]);
+	  console.log(index);
     }
     updateBagelInfo();
   });
