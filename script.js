@@ -75,9 +75,9 @@ function fetchOptions() {
 
 function createGoogleHangout()
 {
-  var string1 = "<g:hangout render='createhangout' invites='[{ id :"
+  var string1 = "<g:hangout render='createhangout' invites='[{ id :'"
   var string2 = biz2_number
-  var string3 = ", invite_type : 'PHONE' }]' widget_size=72> </g:hangout>"
+  var string3 = "', invite_type : 'PHONE' }]' widget_size=72> </g:hangout>"
   var result = string1.concat(string2, string3);
   console.log(result);
   document.getElementById('g_hangout1').innerHTML =  result
