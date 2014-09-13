@@ -122,6 +122,14 @@ input:focus {
   color: #FFFFFF;
 }
 
+.g_hangout{
+  display:block-inline;
+  float:right;
+  position:relative;
+  top:25px;
+  left:15px;
+}
+
 #bagelbite1{
   vertical-align: top;
   height:100px;
