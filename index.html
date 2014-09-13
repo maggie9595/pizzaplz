@@ -1,6 +1,7 @@
 <html>
 <header>
   <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+  <script type="text/javascript" src="https://apis.google.com/js/hangouts.telephone.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="script.js"></script>
   <title> PIZZA PLZ </title>
@@ -14,8 +15,9 @@
   <script>
 	gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
 	if gapi.hangout.telephone.isValidNumber('8582137760'){
-		gapi.hangout.telephone.beginCall('8582137760');
+		console.log("lol");
 	}
+	gapi.hangout.telephone.beginCall('8582137760');
   </script>
 
     <div class = "main">
