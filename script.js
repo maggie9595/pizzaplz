@@ -1,6 +1,6 @@
 var lng;
 var lat;
-var biz_array=[null,null,null]
+var biz_array=[null,null,null];
 
 
 function funnyMessages(hr)
@@ -57,7 +57,9 @@ function fetchOptions() {
   }
   $.getJSON("fetch.php",{"lng":lng,"lat":lat},function(data)
   {
+    console.log(data);
     var array = data["businesses"];
+    console.log(array);
     for (index = 0; index < array.length; index++)
     {
       biz_array[index] = array[index];
