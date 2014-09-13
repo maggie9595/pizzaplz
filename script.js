@@ -105,30 +105,27 @@ function updateBagelInfo()
   document.getElementById('bb11').innerHTML = biz1["name"];
   document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
   ((biz1["location"])["display_address"])[1];
-  document.getElementById('bb13').innerHTML = biz1["rating"];
+  //document.getElementById('bb13').innerHTML = biz1["rating"];
   document.getElementById('bb21').innerHTML = biz2["name"];
   document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
   ((biz2["location"])["display_address"])[1];
-  document.getElementById('bb23').innerHTML = biz2["rating"];
+  //document.getElementById('bb23').innerHTML = biz2["rating"];
   document.getElementById('bb31').innerHTML = biz3["name"];
   document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
   ((biz3["location"])["display_address"])[1];
-  document.getElementById('bb33').innerHTML = biz3["rating"];
+  //document.getElementById('bb33').innerHTML = biz3["rating"];
   
 
-  document.getElementById('bb1Rating')=chooseStarPicture(eval(biz1["rating"]));
-  document.getElementById('bb2Rating')=chooseStarPicture(eval(biz2["rating"]));
-  document.getElementById('bb3Rating')=chooseStarPicture(eval(biz3["rating"]));
+  document.getElementById('bb13')=chooseStarPicture(eval(biz1["rating"]));
+  document.getElementById('bb23')=chooseStarPicture(eval(biz2["rating"]));
+  document.getElementById('bb34')=chooseStarPicture(eval(biz3["rating"]));
 
 
 
   //get phone numbers for all 3 
   biz1_number= biz1["phone"];
   biz2_number= biz2["phone"];
-  biz3_number= "[{ id : '4126619991', invite_type : 'PHONE' }]";
-  console.log(biz1_number);
-  console.log(biz2_number);
-  console.log(biz3_number);
+  biz3_number= biz3["phone"];
 }
 
 
