@@ -38,6 +38,15 @@ body {
   color:#FFFFFF;
 }
 
+#bagelcontainer{
+  display:block-inline;
+  float:right;
+  width:500px;
+  background-color:yellow;
+  margin:20px;
+  margin-top: 50px;
+}
+
 .button {
   -moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
   -webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
