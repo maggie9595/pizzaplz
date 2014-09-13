@@ -68,17 +68,20 @@ function fetchOptions() {
 	  console.log(biz_array[index]);
     }
     updateBagelInfo();
+	createGoogleHangout();
+
   });
 }
 
-function chooseStarPicture(stars){
-  if (stars<1) {
-    return document.getElementById;
-  }
-  else if (stars<2)return document.getElementById;
-  else if (stars<3)return document.getElementById;
-  else if (stars<4)return document.getElementById;
-  else return document.getElementById;
+function createGoogleHangout()
+{
+  var result1 = "<g:hangout render='createhangout'
+    		  invites='[{ id :".concat(biz2_number);
+  var result2 = result1.concat(", invite_type : 'PHONE' }]'
+    		  widget_size=72>
+  	 	    </g:hangout>")
+
+  document.getElementById('g_hangout1').innerHTML =  result2 
 }
 
 function updateBagelInfo()
@@ -91,7 +94,6 @@ function updateBagelInfo()
   document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
   ((biz1["location"])["display_address"])[1];
   document.getElementById('bb13').innerHTML = biz1["rating"] + " Stars";
-
   document.getElementById('bb21').innerHTML = biz2["name"];
   document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
   ((biz2["location"])["display_address"])[1];
@@ -100,6 +102,8 @@ function updateBagelInfo()
   document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
   ((biz3["location"])["display_address"])[1];
   document.getElementById('bb33').innerHTML = biz3["rating"] + " Stars";
+
+
 
   //get phone numbers for all 3 
   biz1_number= biz1["phone"];
