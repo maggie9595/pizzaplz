@@ -51,4 +51,4 @@ $(document).ready(function() {
       });
    });
 //asd
-window.onload=GetClock();
+window.onload=GetClock;
