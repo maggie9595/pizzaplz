@@ -32,8 +32,8 @@ $TOKEN_SECRET = 'z9o4kDirqKoKQVfvQue9ePbCzf4';
 
 $API_HOST = 'api.yelp.com';
 $DEFAULT_TERM = 'pizza';
-$LATITUDE = $_GET['lat'];
-$LONGITUDE = $_GET['lng'];
+$LATITUDE = 40.44;//$_GET['lat'];
+$LONGITUDE = -79.94;//$_GET['lng'];
 $LL = '$LATITUDE, $LONGITUDE';
 //$DEFAULT_LOCATION = 'San Francisco, CA';
 $SEARCH_LIMIT = 3;
@@ -90,11 +90,11 @@ function request($host, $path) {
  * @param    $location    The search location passed to the API 
  * @return   The JSON response from the request 
  */
-function search($term, $ll) {
+function search() {
     $url_params = array();
     $latitude = $GLOBALS['LATITUDE'];
     $longitude = $GLOBALS['LONGITUDE'];
-    $url_params['term'] = $term ?: $GLOBALS['DEFAULT_TERM'];
+    $url_params['term'] = $GLOBALS['DEFAULT_TERM'];
     $url_params['ll'] = "$latitude,$longitude";
     $url_params['limit'] = $GLOBALS['SEARCH_LIMIT'];
     $search_path = $GLOBALS['SEARCH_PATH'] . "?" . http_build_query($url_params);
@@ -120,10 +120,10 @@ function get_business($business_id) {
  * @param    $term        The search term to query
  * @param    $location    The location of the business to query
  */
-/*
-function query_api($term, $ll) {     
+
+function query_api() {     
     
-    $response = json_decode(search($term, $ll));
+    $response = json_decode(search());
     $business_id0 = $response->businesses[0]->id;
     $business_id1 = $response->businesses[1]->id;
     $business_id2 = $response->businesses[2]->id;
@@ -144,10 +144,11 @@ function query_api($term, $ll) {
     //print "\n$response1\n";
     //print "\n$response2\n";
 }
-*/
+
 /**
  * User input is handled here 
  */
+/*
 $longopts  = array(
     "term::",
     "ll::",
@@ -157,7 +158,7 @@ $options = getopt("", $longopts);
 
 $term = $options['term'] ?: '';
 $ll = $options['ll'] ?: '';
-
-echo search($term, $ll);
+*/
+echo search();
 
 ?>
