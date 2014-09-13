@@ -71,6 +71,16 @@ function fetchOptions() {
   });
 }
 
+function chooseStarPicture(stars){
+  if (stars<1) {
+    return document.getElementById;
+  }
+  else if (stars<2)return document.getElementById;
+  else if (stars<3)return document.getElementById;
+  else if (stars<4)return document.getElementById;
+  else return document.getElementById;
+}
+
 function updateBagelInfo()
 {
   var biz1 = biz_array[0];
@@ -81,6 +91,7 @@ function updateBagelInfo()
   document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
   ((biz1["location"])["display_address"])[1];
   document.getElementById('bb13').innerHTML = biz1["rating"] + " Stars";
+
   document.getElementById('bb21').innerHTML = biz2["name"];
   document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
   ((biz2["location"])["display_address"])[1];
