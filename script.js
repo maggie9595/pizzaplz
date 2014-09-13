@@ -1,5 +1,7 @@
 var lng;
 var lat;
+var biz_array=[null,null,null]
+
 
 function funnyMessages(hr)
 {
@@ -48,10 +50,18 @@ function getLocation() {
 }
 
 function fetchOptions() {
+  if (lng == null||lat == null)
+  {
+    lng = -79.94464;
+    lat = 40.44330;
+  }
   $.getJSON("fetch.php",{"lng":lng,"lat":lat},function(data)
   {
-    var dr =data.result;
-    console.log(dr["name"]);
+    var array = data["businesses"];
+    for (index = 0; index < array.length; index++)
+    {
+      biz_array[index] = array[index];
+    }
   });
 }
 

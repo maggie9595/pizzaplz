@@ -159,6 +159,8 @@ $options = getopt("", $longopts);
 $term = $options['term'] ?: '';
 $ll = $options['ll'] ?: '';
 */
-echo search();
+$response = json_decode(search());
+echo json_encode($response);
+//echo json_encode(array("result" => $response->businesses[0]->id)); //encode to JSON
 
 ?>
