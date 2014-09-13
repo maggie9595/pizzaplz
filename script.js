@@ -66,7 +66,6 @@ function fetchOptions() {
     {
       biz_array[index] = array[index];
 	  console.log(biz_array[index]);
-	  console.log(index);
     }
     updateBagelInfo();
   });
@@ -95,6 +94,9 @@ function updateBagelInfo()
   biz1_number= biz1["phone"];
   biz2_number= biz2["phone"];
   biz3_number= biz3["phone"];
+  console.log(biz1_number);
+  console.log(biz2_number);
+  console.log(biz3_number);
 }
 
 
