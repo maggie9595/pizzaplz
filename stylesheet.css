@@ -41,10 +41,27 @@ body {
 #bagelcontainer{
   display:block-inline;
   float:right;
-  width:500px;
-  background-color:yellow;
+  width:480px;
   margin:20px;
   margin-top: 50px;
+  padding: 10px;
+  font-family:  Garamond, Georgia, serif; 
+  font-weight: 700;
+  font-size:24px;
+  color: #FFFFFF;
+}#bagelbite1{
+  vertical-align: top;
+  height:100px;
+}#bagelbite2{
+  vertical-align: top;
+  height:100px;
+}#bagelbite3{
+  vertical-align: top;
+  height:100px;
+}
+
+.bagelinfo{
+  margin-left:20px;
 }
 
 .button {
