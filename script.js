@@ -4,7 +4,7 @@ var lat;
 function funnyMessages(hr)
 {
   var message1;
-  if (4 <= hr && hr < 7) message1 = "Are pizza places even open this late?";
+  if (4 <= hr && hr < 7) message1 = "Are pizza places even open this late(or early)?";
   else if (7 <= hr && hr < 10) message1 = "Reconsider pizza for breakfast.";
   else if (10 <= hr && hr < 14) message1 = "Shouldn't you be working?";
   else if (14 <= hr && hr < 18) message1 = "Afternoon snack time!";
@@ -47,6 +47,14 @@ function getLocation() {
     }
 }
 
+function fetchOptions() {
+  $.getJSON("fetch.php",{"lng":lng,"lat":lat},function(data)
+  {
+    var dr =data.result;
+    console.log(dr["name"]);
+  });
+}
+
 
 $(document).ready(function() {
 
@@ -57,6 +65,7 @@ $(document).ready(function() {
 
       $("#out").click(function(){
          getLocation();
+         fetchOptions();
          $(".target").fadeOut( 'slow', function(){ 
           $("#bagelbite1").fadeIn();
           $("#bagelbite2").fadeIn();
