@@ -71,12 +71,15 @@ body {
   text-decoration:none;
   text-align:center;
 }
+
 .button:hover {
   background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b90a0a), color-stop(1, #f24537) );
   background:-moz-linear-gradient( center top, #b90a0a 5%, #f24537 100% );
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b90a0a', endColorstr='#f24537');
   background-color:#b90a0a;
-}.button:active {
+}
+
+.button:active {
   position:relative;
   top:1px;
 }
