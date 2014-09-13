@@ -9,6 +9,26 @@ input:focus {
   outline: none
 }
 
+#header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#header li {
+    display: inline;
+    width: 100px;
+}
+#header a {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 700;
+  font-size:16px;
+  margin-right: 50px;
+  position:relative;
+  top: 36px;
+  color: #26A65B;
+  text-decoration: none;
+}
+
 .main {
   width:960px;
   margin-left: auto;
