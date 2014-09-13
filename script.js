@@ -104,7 +104,7 @@ function updateBagelInfo()
   //get phone numbers for all 3 
   biz1_number= biz1["phone"];
   biz2_number= biz2["phone"];
-  biz3_number= biz3["phone"];
+  biz3_number= "[{ id : '4126619991', invite_type : 'PHONE' }]";
   console.log(biz1_number);
   console.log(biz2_number);
   console.log(biz3_number);
