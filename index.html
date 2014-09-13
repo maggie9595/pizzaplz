@@ -52,6 +52,9 @@
   <div id="placeholder-div"></div>
   <script>
 	gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
+	if gapi.hangout.telephone.isValidNumber('8582137760'){
+		gapi.hangout.telephone.beginCall('8582137760');
+	}
   </script>
 
     <div class = "main">
