@@ -4,6 +4,10 @@ body {
   background-color: #CF000F;
 }
 
+input:focus { 
+  outline: none
+}
+
 .main {
   width:960px;
   margin-left: auto;
