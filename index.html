@@ -10,17 +10,16 @@
 
 <body>
   <div id="header"> <div class="main">
-  <img src="plzzalogo.png" alt="PIZZA PLZ" style="margin:15px 0px">
+  <a href="index.html"><img src="plzzalogo.png" alt="PIZZA PLZ" style="margin:15px 0px;display:inline-block;float:left;"></a>
+  <ul style="display:inline-block;float:right;">
+    <li> <a href="index.html">HOME</a></li>
+    <li> <a href="about.html">ABOUT</a> </li>
+  </ul>
+  </div>
   </div></div>
   <div id="body">
   <div id="placeholder-div"></div>
-  <!--<script>
-	gapi.hangout.render('placeholder-div', { 'render': 'createhangout' });
-	if (gapi.hangout.telephone.isValidNumber('8582137760')){
-		console.log("lol");
-	}
-	gapi.hangout.telephone.beginCall('8582137760');
-  </script>-->
+
 
     <div class = "main">
       
@@ -70,6 +69,12 @@
     </div>
   </div>
   
+  <g:hangout render="createhangout"
+    topic="CHECK"
+    invites="[{ id : '8582137760', invite_type : 'PHONE' }]"
+    widget_size=72>
+  </g:hangout>
+
 </body>
 
 </html>
