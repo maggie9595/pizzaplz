@@ -75,13 +75,11 @@ function fetchOptions() {
 
 function createGoogleHangout()
 {
-  var result1 = "<g:hangout render='createhangout'
-    		  invites='[{ id :".concat(biz2_number);
-  var result2 = result1.concat(", invite_type : 'PHONE' }]'
-    		  widget_size=72>
-  	 	    </g:hangout>")
-
-  document.getElementById('g_hangout1').innerHTML =  result2 
+  var string1 = "<g:hangout render='createhangout' invites='[{ id :"
+  var string2 = biz2_number
+  var string3 = ", invite_type : 'PHONE' }]' widget_size=72> </g:hangout>"
+  var result = string1.concat(string2, string3);
+  document.getElementById('g_hangout1').innerHTML =  result
 }
 
 function updateBagelInfo()
