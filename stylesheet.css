@@ -17,7 +17,6 @@ input:focus {
 #header li {
     margin:5px;
     display: inline;
-    width: 100px;
 }
 
 #footer ul {
@@ -31,16 +30,9 @@ input:focus {
 }
 
 #header ul li a {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: bold;
-  font-size:16px;
-  margin-right: 20px;
-  padding:10px;
+  padding:5px;
   position:relative;
-  top: 36px;
-  color: #CC1100;
-  background-color: #FFEEA9;
-  text-decoration: none;
+  top: 30px;
 }
 
 #header ul li a:hover {
