@@ -1,3 +1,6 @@
+<?php include 'locationservices.php';?>
+
+
 <?
 /*
 Yelp!
@@ -6,6 +9,8 @@ Consumer Secret	tQdjt15zLAiCsidbTJ1cw4jbik0
 Token	d5horvutMWIfviR_6SLV4hnJxZ7vWyM-
 Token Secret	GMVQxw_HjoA10OzoYFWVZe__YjQ
 */
+?>
+
 <?php
 
 /*
@@ -41,9 +46,9 @@ $TOKEN_SECRET = GMVQxw_HjoA10OzoYFWVZe__YjQ;
 $API_HOST = 'api.yelp.com';
 $DEFAULT_TERM = 'pizza';
 //$DEFAULT_LOCATION = 'San Francisco, CA';
-$LATITUDE = x;
-$LONGITUDE = y;
-$SEARCH_LIMIT = 3;
+$LATITUDE = 40.44334;
+$LONGITUDE = -79.94470;
+$SEARCH_LIMIT = 5;
 $SEARCH_PATH = '/v2/search/';
 $BUSINESS_PATH = '/v2/business/';
 
@@ -97,10 +102,10 @@ function request($host, $path) {
  * @param    $location    The search location passed to the API 
  * @return   The JSON response from the request 
  */
-function search($term) {
+function search() {
     $url_params = array();
     
-    $url_params['term'] = $term ?: $GLOBALS['DEFAULT_TERM'];
+    $url_params['term'] =$GLOBALS['DEFAULT_TERM'];
     $url_params['cll'] = $GLOBALS['LATITUDE','LONGITUDE'];
     $url_params['limit'] = $GLOBALS['SEARCH_LIMIT'];
     $search_path = $GLOBALS['SEARCH_PATH'] . "?" . http_build_query($url_params);
@@ -126,20 +131,23 @@ function get_business($business_id) {
  * @param    $term        The search term to query
  * @param    $location    The location of the business to query
  */
-function query_api($term, $location) {     
-    $response = json_decode(search($term, $location));
+function query_api() {     
+    $response = json_decode(search());
     $business_id = $response->businesses[0]->id;
-    
+    echo "$business_id";
+    /*
     print sprintf(
         "%d businesses found, querying business info for the top result \"%s\"\n\n",         
         count($response->businesses),
         $business_id
-    );
+    );*/
     
+
     $response = get_business($business_id);
-    
+    /*
     print sprintf("Result for business \"%s\" found:\n", $business_id);
     print "$response\n";
+    */
 }
 
 /**
@@ -152,10 +160,8 @@ $longopts  = array(
     
 $options = getopt("", $longopts);
 
-$term = $options['term'] ?: '';
-$location = $options['location'] ?: '';
 
-query_api($term, $location);
+query_api();
 
 ?>
 ?>
