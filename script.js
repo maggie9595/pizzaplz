@@ -52,7 +52,6 @@ $(document).ready(function() {
 
       $("#in").click(function(){
          $(".target").fadeIn( 'slow', function(){
-
           });
       });
 
@@ -62,8 +61,7 @@ $(document).ready(function() {
           $("#bagelbite1").fadeIn();
           $("#bagelbite2").fadeIn();
           $("#bagelbite3").fadeIn();
-          $("#bagelbite4").fadeIn();
-          $("#bagelbite5").fadeIn();
+          $("#bagelcontainer").fadeIn();
           });
       });
    });
