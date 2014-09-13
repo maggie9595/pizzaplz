@@ -1,3 +1,26 @@
+<script type="text/javascript" 
+   src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+   <script type="text/javascript" language="javascript">
+   
+    $(document).ready(function() {
+
+      $("#in").click(function(){
+         $(".target").fadeIn( 'slow', function(){
+          });
+      });
+
+      $("#out").click(function(){
+         $(".target").fadeOut( 'slow', function(){ 
+          $(this).attr('src', plzzalogo.png)
+          .fadeIn();
+          });
+      });
+
+   });
+</script>
+
+
 <html>
 <header>
   <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
@@ -9,7 +32,11 @@
 
 <body>
   <div id="header"> <div class="main">
-  <div class="target"><button id="out" img src="plzzalogo.png" alt="PIZZA PLZ" style="margin:15px 0px"></div></div></div>
+
+  <img src="pizza_button_100px.png" alt="jQuery" />
+
+  <img src="plzzalogo.png" alt="PIZZA PLZ" style="margin:15px 0px">
+  </div></div>
   <div id="body">
   <div id="placeholder-div"></div>
   <script>
@@ -22,8 +49,10 @@
 
     <div class = "main">
       <div style="display:block-inline;float:right;">
-        <button style="margin:20px;background-image:pizza_button.png" onclick="getLocation();">get loc</button>
-      </div>
+         <div class="target">
+         <div id="out">
+        <input type="image" src="pizza_button.png" style="margin:20px"></input>
+      </div></div></div>
       
       <div id="info">
         <div id="clockbox">.</div>
