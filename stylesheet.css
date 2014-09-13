@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #CF000F;
+  /*background-color: #CF000F;*/
+  background-image: url("bricks.png")
 }
 
 input:focus { 
@@ -20,13 +21,21 @@ input:focus {
   height: 100px;
 }
 
+#left {
+  width:380px;
+  height:500px;
+  padding:10px;
+  position:relative;
+  margin-top: 20px;
+  top:10px;
+}
+
 #info {
   display:block-inline;
   float:left;
   width:400px;
-  margin-top: 50px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 700;
+  font-weight: 100;
   font-size:32px;
   color:#FFEEA9;
   text-shadow: 0.5px 1px 0px #FFE780;
@@ -56,12 +65,15 @@ input:focus {
 }#bagelbite1{
   vertical-align: top;
   height:100px;
+  padding:10px;
 }#bagelbite2{
   vertical-align: top;
   height:100px;
+  padding:10px;
 }#bagelbite3{
   vertical-align: top;
   height:100px;
+  padding:10px;
 }
 
 .bagelinfo{
