@@ -92,6 +92,7 @@ input:focus {
   font-weight:100;
   font-size:24px;
   color:#FFFFFF;
+  text-shadow: 0.5px 1px 0px #FFFFFF;
 }
 
 #bagelcontainer{
@@ -105,15 +106,21 @@ input:focus {
   font-weight: 700;
   font-size:24px;
   color: #FFFFFF;
-}#bagelbite1{
+}
+
+#bagelbite1{
   vertical-align: top;
   height:100px;
   padding:10px;
-}#bagelbite2{
+}
+
+#bagelbite2{
   vertical-align: top;
   height:100px;
   padding:10px;
-}#bagelbite3{
+}
+
+#bagelbite3{
   vertical-align: top;
   height:100px;
   padding:10px;
