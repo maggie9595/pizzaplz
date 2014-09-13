@@ -57,9 +57,7 @@ function fetchOptions() {
   }
   $.getJSON("fetch.php",{"lng":lng,"lat":lat},function(data)
   {
-    console.log(data);
     var array = data["businesses"];
-    console.log(array);
     for (index = 0; index < array.length; index++)
     {
       biz_array[index] = array[index];

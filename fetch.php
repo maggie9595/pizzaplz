@@ -26,14 +26,14 @@ require_once('lib/OAuth.php');
 // developers documentation (http://www.yelp.com/developers)
 $CONSUMER_KEY = 'z5_UOVEwvZmthgBLs_zTJQ';
 $CONSUMER_SECRET = 'tQdjt15zLAiCsidbTJ1cw4jbik0';
-$TOKEN = 'hmKAjuo15NQFhHDHozd6JJU-Cyonc6xV';
-$TOKEN_SECRET = 'z9o4kDirqKoKQVfvQue9ePbCzf4';
+$TOKEN = 'xe4GvkV7JBSl4aHHG-x8Y2We7zXS4WhF';
+$TOKEN_SECRET = 'Y_f8zKhfDZr0qkPAsK-Ij_WB7tE';
 
 
 $API_HOST = 'api.yelp.com';
 $DEFAULT_TERM = 'pizza';
-$LATITUDE = 40.44330;
-$LONGITUDE = -79.94464; //$_GET['lng'];
+$LATITUDE = $_GET['lat'];
+$LONGITUDE = $_GET['lng'];
 $LL = '$LATITUDE, $LONGITUDE';
 //$DEFAULT_LOCATION = 'San Francisco, CA';
 $SEARCH_LIMIT = 3;
@@ -159,8 +159,7 @@ $options = getopt("", $longopts);
 $term = $options['term'] ?: '';
 $ll = $options['ll'] ?: '';
 */
-$response = json_decode(search());
-echo json_encode($response);
+echo search();
 //echo json_encode(array("result" => $response->businesses[0]->id)); //encode to JSON
 
 ?>
