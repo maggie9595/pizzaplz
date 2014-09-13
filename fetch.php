@@ -36,7 +36,7 @@ $LATITUDE = $_GET['lat'];
 $LONGITUDE = $_GET['lng'];
 $LL = '$LATITUDE, $LONGITUDE';
 //$DEFAULT_LOCATION = 'San Francisco, CA';
-$SEARCH_LIMIT = 3;
+$SEARCH_LIMIT = 20;
 $SEARCH_PATH = '/v2/search/';
 $BUSINESS_PATH = '/v2/business/';
 

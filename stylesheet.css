@@ -125,6 +125,11 @@ input:focus {
   color: #FFFFFF;
 }
 
+#controls{
+  display: block-inline;
+  float:right;
+}
+
 .g_hangout{
   display:block-inline;
   float:right;
@@ -154,6 +159,8 @@ input:focus {
 .bagelinfo{
   margin-left:20px;
 }
+
+
 
 .button {
   -moz-box-shadow:inset 0px 1px 0px 0px #f5978e;

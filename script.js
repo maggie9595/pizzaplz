@@ -98,6 +98,7 @@ function chooseStarPicture(stars){
 function updateBagelInfo()
 
 {
+  
   var biz1 = biz_array[0];
   var biz2 = biz_array[1];
   var biz3 = biz_array[2];
