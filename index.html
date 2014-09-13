@@ -1,33 +1,8 @@
-<script type="text/javascript" 
-   src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-   <script type="text/javascript" language="javascript">
-   
-    $(document).ready(function() {
-
-      $("#in").click(function(){
-         $(".target").fadeIn( 'slow', function(){
-
-          });
-      });
-
-      $("#out").click(function(){
-         getLocation();
-         $(".target").fadeOut( 'slow', function(){ 
-
-          $(this).attr('src', 'pizza_button_100px.png')
-          .fadeIn();
-          });
-      });
-
-   });
-</script>
-
-
 <html>
 <header>
   <script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
   <script type="text/javascript" src="https://apis.google.com/js/hangouts.telephone.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <script src="script.js"></script>
   <title> PIZZA PLZ </title>

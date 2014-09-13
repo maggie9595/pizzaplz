@@ -31,9 +31,22 @@ function getLocation() {
 }
 
 
+$(document).ready(function() {
 
+      $("#in").click(function(){
+         $(".target").fadeIn( 'slow', function(){
 
+          });
+      });
 
+      $("#out").click(function(){
+         getLocation();
+         $(".target").fadeOut( 'slow', function(){ 
 
+          $(this).attr('src', 'pizza_button_100px.png')
+          .fadeIn();
+          });
+      });
+   });
 
-window.onload=GetClock;
+window.onload=GetClock();
