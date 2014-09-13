@@ -26,8 +26,8 @@ require_once('lib/OAuth.php');
 // developers documentation (http://www.yelp.com/developers)
 $CONSUMER_KEY = 'z5_UOVEwvZmthgBLs_zTJQ';
 $CONSUMER_SECRET = 'tQdjt15zLAiCsidbTJ1cw4jbik0';
-$TOKEN = 'xe4GvkV7JBSl4aHHG-x8Y2We7zXS4WhF';
-$TOKEN_SECRET = 'Y_f8zKhfDZr0qkPAsK-Ij_WB7tE';
+$TOKEN = 'X76Uo1ECDou0iHewBOD3RIfyt16dY0Ap';
+$TOKEN_SECRET = 'AOa-QAEd-CZrfk4v4Y8EQsOaoNY';
 
 
 $API_HOST = 'api.yelp.com';
