@@ -29,6 +29,11 @@ input:focus {
   text-decoration: none;
 }
 
+#out {
+  position:relative;
+  bottom:-40px;
+}
+
 .main {
   width:960px;
   margin-left: auto;
@@ -37,8 +42,21 @@ input:focus {
 }
 
 #header {
-  background-color:#ffc000;
+  background-color:#E8C45D;
   height: 100px;
+}
+
+#footer{
+  clear:both;
+  position:relative;
+  height:200px;
+  background-color:#724C2D;
+} #footer #container
+{
+  width:960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding:30px;
 }
 
 #left {
