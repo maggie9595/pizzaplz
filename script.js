@@ -16,7 +16,7 @@ function GetClock(){
   setTimeout("GetClock()", 1000);
   }
 
-function storeLocation(location)
+function storeLocation(position)
 {
   lat = position.coords.latitude;
   lng = position.coords.longitude;
