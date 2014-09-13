@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: red;
+  background-color: #CF000F;
 }
 
 .main {
@@ -17,10 +17,24 @@ body {
 }
 
 #info {
+  display:block-inline;
+  float:left;
+  width:400px;
+  margin-top: 50px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 700;
   font-size:32px;
-  color:red;
+  color:#FFEEA9;
+  text-shadow: 0.5px 1px 0px #FFE780;
+}
+
+#instructions{
+  display:block-inline;
+  float:left;
+  width:400px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-size:24px;
+  color:#FFFFFF;
 }
 
 .button {
