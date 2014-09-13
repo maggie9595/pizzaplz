@@ -86,6 +86,15 @@ function createGoogleHangout()
     'widget_size':'72'});
 }
 
+function chooseStarPicture(stars){
+  if (stars<0.5) return ("yelp_0_stars.png");
+  else if (stars<1.5) return ("yelp_1_stars.png");
+  else if (stars<2.5) return ("yelp_2_stars.png");
+  else if (stars<3.5) return ("yelp_3_stars.png");
+  else if (stars<4.5) return ("yelp_4_stars.png");
+  else return ("yelp_5_stars.png");
+}
+
 function updateBagelInfo()
 
 {
@@ -96,15 +105,20 @@ function updateBagelInfo()
   document.getElementById('bb11').innerHTML = biz1["name"];
   document.getElementById('bb12').innerHTML = ((biz1["location"])["display_address"])[0] + ", " +
   ((biz1["location"])["display_address"])[1];
-  document.getElementById('bb13').innerHTML = biz1["rating"] + " Stars";
+  document.getElementById('bb13').innerHTML = biz1["rating"];
   document.getElementById('bb21').innerHTML = biz2["name"];
   document.getElementById('bb22').innerHTML = ((biz2["location"])["display_address"])[0] + ", " +
   ((biz2["location"])["display_address"])[1];
-  document.getElementById('bb23').innerHTML = biz2["rating"] + " Stars";
+  document.getElementById('bb23').innerHTML = biz2["rating"];
   document.getElementById('bb31').innerHTML = biz3["name"];
   document.getElementById('bb32').innerHTML = ((biz3["location"])["display_address"])[0] + ", " +
   ((biz3["location"])["display_address"])[1];
-  document.getElementById('bb33').innerHTML = biz3["rating"] + " Stars";
+  document.getElementById('bb33').innerHTML = biz3["rating"];
+  
+
+  document.getElementById('bb1Rating')=chooseStarPicture(eval(biz1["rating"]));
+  document.getElementById('bb2Rating')=chooseStarPicture(eval(biz2["rating"]));
+  document.getElementById('bb3Rating')=chooseStarPicture(eval(biz3["rating"]));
 
 
 
