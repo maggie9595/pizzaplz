@@ -43,9 +43,10 @@ function storeLocation(position)
 {
   lat = position.coords.latitude;
   lng = position.coords.longitude;
+  fetchOptions(lng,lat);
 }
 
-function getLocation() {
+function getPizza() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(storeLocation);
     } else { 
@@ -53,7 +54,7 @@ function getLocation() {
     }
 }
 
-function fetchOptions() {
+function fetchOptions(lng,lat) {
   if (lng == null||lat == null)
   {
     lng = -79.94464;
@@ -65,10 +66,9 @@ function fetchOptions() {
     for (index = 0; index < array.length; index++)
     {
       biz_array[index] = array[index];
-	  console.log(biz_array[index]);
     }
     updateBagelInfo();
-	createGoogleHangout();
+	  createGoogleHangout();
 
   });
 }
@@ -141,12 +141,6 @@ function updateBagelInfo()
     document.getElementById('bb33').src = ""
   }
 
-  
-  
-  
-
-
-
   //get phone numbers for all 3 
   biz1_number= biz1["phone"];
   biz2_number= biz2["phone"];
@@ -155,7 +149,6 @@ function updateBagelInfo()
 
 function flipPages(x)
 {
-  console.log("uhoh");
   if (biz_array == null) return 0;
   if (x == -1 && (start-3) >=0)
   {
@@ -180,8 +173,7 @@ $(document).ready(function() {
       });
 
       $("#out").click(function(){
-         getLocation();
-         fetchOptions();
+         getPizza();
          
          $(".target").fadeOut( 'slow', function(){ 
           $("#bagelbite1").fadeIn();
